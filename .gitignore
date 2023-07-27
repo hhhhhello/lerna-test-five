@@ -10,3 +10,18 @@ packages/*/lib
 packages/*/es
 packages/components/*/lib
 packages/components/*/es
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+packages/*/*.log
+packages/components/*/*.log
+
+yarn.lock
+packages/*/yarn.lock
+packages/components/*/yarn.lock
