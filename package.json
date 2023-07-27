@@ -14,27 +14,12 @@
     "start": "npm run dev",
     "dev": "dumi dev",
     "build:doc": "dumi build",
-    "prepare": "husky install && dumi setup",
     "compile": "rollup -c build/rollup.config.js --environment relativePath:../test",
     "watch": "yarn compile -- --watch",
-    "build": "shx rm -rf lib es && yarn compile",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,html,md}\"",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint:lint-staged": "lint-staged"
+    "build": "shx rm -rf lib es && yarn compile"
   },
   "authors": [],
   "license": "MIT",
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
-    ]
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
