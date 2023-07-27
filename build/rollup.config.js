@@ -71,6 +71,11 @@ export default {
       },
       autoModules: false,
     }),
+    babel({
+      exclude: 'node_modules/**',
+      babelHelpers: 'runtime',
+      extensions: defaultExtensions,
+    }),
     copy({
       targets: [
         {
