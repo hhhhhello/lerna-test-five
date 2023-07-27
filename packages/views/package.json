@@ -2,11 +2,23 @@
   "name": "base-views",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "rollup -c ../../build/rollup.config.js --environment relativePath:../packages/views",
+    "watch": "yarn compile -- --watch",
+    "build": "shx rm -rf lib es && yarn compile"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^3.2.5",
+    "shx": "^0.3.4"
+  }
 }

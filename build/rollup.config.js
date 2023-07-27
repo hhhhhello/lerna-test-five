@@ -13,9 +13,16 @@ import externals from 'rollup-plugin-node-externals'
 import postcss from 'rollup-plugin-postcss'
 import { fileURLToPath } from 'url'
 
-const package_ = JSON.parse(readFileSync('./package.json'))
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const relativePath = process.env.relativePath
+console.log(relativePath, 'relativePath')
+const buildConfigFile = fileURLToPath(import.meta.url)
+console.log(buildConfigFile, 'buildConfigFile')
+const buildDirname = path.dirname(buildConfigFile)
+console.log(buildDirname, 'buildDirname')
+const targetPath = path.resolve(buildDirname, relativePath)
+console.log(targetPath, 'targetPath')
+const package_ = JSON.parse(readFileSync(`${targetPath}/package.json`))
+
 
 const defaultExtensions = [
   '.js',
@@ -27,11 +34,12 @@ const defaultExtensions = [
   '.less',
 ]
 
+
 export default {
-  input: 'src/index.ts',
+  input: `${targetPath}/src/index.ts`,
   output: [
     {
-      dir: path.dirname(package_.main),
+      dir: `${targetPath}/${path.dirname(package_.main)}`,
       format: 'cjs',
       name: package_.name,
       exports: 'named',
@@ -39,7 +47,7 @@ export default {
       preserveModulesRoot: 'src',
     },
     {
-      dir: path.dirname(package_.module),
+      dir: `${targetPath}/${path.dirname(package_.module)}`,
       format: 'esm',
       name: package_.name,
       exports: 'named',
@@ -50,7 +58,7 @@ export default {
   plugins: [
     nodeResolve({ extensions: defaultExtensions }),
     alias({
-      entries: [{ find: '@', replacement: path.resolve(__dirname, '../src') }],
+      entries: [{ find: '@', replacement: `${targetPath}/src` }],
       customResolver: nodeResolve({
         extensions: defaultExtensions,
       }),
@@ -66,12 +74,12 @@ export default {
     copy({
       targets: [
         {
-          src: path.resolve(__dirname, '../src/styles'),
-          dest: path.resolve(__dirname, '../lib'),
+          src: `${targetPath}/src/styles`,
+          dest: `${targetPath}/src/lib`,
         },
         {
-          src: path.resolve(__dirname, '../src/styles'),
-          dest: path.resolve(__dirname, '../es'),
+          src: `${targetPath}/src/styles`,
+          dest: `${targetPath}/src/es`,
         },
       ],
     }),
