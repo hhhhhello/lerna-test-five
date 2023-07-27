@@ -1,1 +1,4 @@
-console.log('views')
+const print = () => {
+  console.log('print')
+}
+print()

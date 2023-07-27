@@ -1,0 +1,57 @@
+0 silly argv { _: [ 'version' ], lernaVersion: '7.1.4', '$0': 'lerna' }
+1 notice cli v7.1.4
+2 verbose packageConfigs Explicit "packages" configuration found in lerna.json. Resolving packages using the configured glob(s): ["packages/*","packages/components/*"]
+3 verbose rootPath /Users/zhengxiaomei/Documents/docz/test/lerna-test-five
+4 info versioning independent
+5 silly isAnythingCommitted
+6 verbose isAnythingCommitted 1
+7 silly getCurrentBranch
+8 verbose currentBranch master
+9 silly remoteBranchExists
+10 silly isBehindUpstream
+11 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 0
+12 silly hasTags
+13 verbose hasTags false
+14 info Assuming all packages changed
+15 verbose updated base-button
+16 verbose updated base-input
+17 verbose updated base-utils
+18 verbose updated base-views
+19 verbose git-describe undefined => "552dc6d"
+20 silly git-describe parsed => {"refCount":"7","sha":"552dc6d","isDirty":false}
+21 info execute Skipping releases
+22 silly lifecycle No script for "preversion" in "lerna-test-five", continuing
+23 silly lifecycle No script for "preversion" in "base-button", continuing
+24 silly lifecycle No script for "preversion" in "base-input", continuing
+25 silly lifecycle No script for "preversion" in "base-utils", continuing
+26 silly lifecycle No script for "preversion" in "base-views", continuing
+27 verbose version base-utils has no lockfile. Skipping lockfile update.
+28 verbose version base-input has no lockfile. Skipping lockfile update.
+29 verbose version base-views has no lockfile. Skipping lockfile update.
+30 verbose version base-button has no lockfile. Skipping lockfile update.
+31 silly lifecycle No script for "version" in "base-button", continuing
+32 silly lifecycle No script for "version" in "base-input", continuing
+33 silly lifecycle No script for "version" in "base-views", continuing
+34 silly lifecycle No script for "version" in "base-utils", continuing
+35 silly lifecycle No script for "version" in "lerna-test-five", continuing
+36 error Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/zhengxiaomei/Documents/docz/test/lerna-test-five/.prettierrc.js from /Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js not supported.
+36 error .prettierrc.js is treated as an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which declares all .js files in that package scope as ES modules.
+36 error Instead rename .prettierrc.js to end in .cjs, change the requiring code to use dynamic import() which is available in all CommonJS modules, or change "type": "module" to "type": "commonjs" in /Users/zhengxiaomei/Documents/docz/test/lerna-test-five/package.json to treat all .js files as CommonJS (using .mjs for all ES modules instead).
+36 error
+36 error     at module2.exports (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:83:61)
+36 error     at loadJs2 (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8050:22)
+36 error     at Explorer.loadFileContent (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8449:36)
+36 error     at Explorer.createCosmiconfigResult (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8453:40)
+36 error     at Explorer.loadSearchPlace (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8438:35)
+36 error     at async Explorer.searchDirectory (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8428:31)
+36 error     at async run (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8413:26)
+36 error     at async cacheWrapper (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8294:22)
+36 error     at async cacheWrapper (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8294:22)
+36 error     at async cacheWrapper (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8294:22)
+36 error     at async cacheWrapper (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8294:22)
+36 error     at async Explorer.search (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/prettier/third-party.js:8407:24)
+36 error     at async Promise.all (index 0)
+36 error     at async maybeFormatFile (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/lerna/dist/index.js:7457:18)
+36 error     at async gitAdd (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/lerna/dist/index.js:7481:5)
+36 error     at async VersionCommand.updatePackageVersions (/Users/zhengxiaomei/Documents/docz/test/lerna-test-five/node_modules/lerna/dist/index.js:8312:11)
+36 error     at async Promise.all (index 0)
