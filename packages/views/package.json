@@ -1,8 +1,9 @@
 {
   "name": "base-views",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
+  "type": "module",
   "module": "es/index.js",
   "types": "lib/index.d.ts",
   "files": [
