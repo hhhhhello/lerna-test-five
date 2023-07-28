@@ -25,3 +25,12 @@ packages/components/*/*.log
 yarn.lock
 packages/*/yarn.lock
 packages/components/*/yarn.lock
+
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
