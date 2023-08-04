@@ -95,5 +95,6 @@
     "react-dom": ">=17.0.0",
     "react-redux": ">=8.0.2",
     "react-router-dom": ">=6.3.0"
-  }
+  },
+  "gitHead": "e07ef2bd50d2009965f86e4b6fbba7cfd2f81c63"
 }
