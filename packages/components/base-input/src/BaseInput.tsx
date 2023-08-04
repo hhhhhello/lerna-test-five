@@ -12,7 +12,7 @@ interface Props {
 
 const View:FC<Props> = ({title='label'}) => {
   return <div>
-    <span>{title}: dd</span>
+    <span>{title}: ddrrr</span>
     <Input />
   </div>
 }
