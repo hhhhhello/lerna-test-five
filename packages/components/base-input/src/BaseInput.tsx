@@ -4,7 +4,7 @@ import { Input } from 'antd'
 
 const View:FC = () => {
   return <div>
-    <span>test: </span>
+    <span>label: </span>
     <Input />
   </div>
 }
