@@ -3,7 +3,7 @@ import path from 'path';
 
 export default defineConfig({
   themeConfig: {
-    name: 'lerna-test-five',
+    name: 'hh',
   },
   resolve: {
     atomDirs: [

@@ -4,7 +4,7 @@ import { Button } from 'antd'
 
 const View:FC = () => {
   return <div>
-    <Button>tttttt</Button>
+    <Button>tttttkkt</Button>
   </div>
 }
 
