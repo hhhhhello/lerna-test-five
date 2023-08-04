@@ -14,5 +14,5 @@ export default defineConfig({
   },
   alias: {
     'base-input': path.join(__dirname, 'packages/components/base-input/src')
-  }
+  },
 });
